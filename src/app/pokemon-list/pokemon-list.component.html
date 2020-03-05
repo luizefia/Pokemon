@@ -1,0 +1,12 @@
+<div *ngIf="listaPokemonResult">
+    <div *ngFor="let poke of listaPokemonResult">
+        <p>
+            <app-pokemon-details [pokemonModel]="poke">
+            <br>
+            {{poke.id}}<br>
+            {{poke.name}}<br>            
+            <img [src]="poke.url">
+        </app-pokemon-details>
+        </p>
+    </div>
+</div>

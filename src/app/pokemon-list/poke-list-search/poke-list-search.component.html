@@ -1,0 +1,18 @@
+<div class="text-center">
+    <p>
+        <label>
+            Numero Inicial:
+        </label>
+        <br><input [(ngModel)]="numeroInicial">
+    </p>
+    <p>
+        <label
+        >Numero Final:
+        </label>
+        <br><input [(ngModel)]="numeroFinal">
+    </p>    
+    <button (click)="getAll(numeroInicial, numeroFinal)">
+        Search
+    </button>
+    <app-pokemon-list *ngIf="pokeLista" [pokeLista]="pokeLista"></app-pokemon-list>
+</div>

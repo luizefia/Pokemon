@@ -1,0 +1,19 @@
+<div class="text-center">
+    <p>
+        <input [(ngModel)]="id" placeholder="Id or name" autofocus #test>
+    </p>
+    <button class="btn btn-primary" (click)="limparModel(pokemonModel); getPokemon(id); limparTexto(test)">
+        Search
+    </button>
+</div>
+
+<div *ngIf="pokemonModel  else carregarErro">
+    <app-pokemon-details [pokemonModel]="pokemonModel">        
+    </app-pokemon-details>
+</div>
+
+<ng-template #carregarErro>
+    <div>
+        <app-error></app-error>
+    </div>
+</ng-template>
